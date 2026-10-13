@@ -56,15 +56,15 @@ def ai_move():
     if board[1][1] == EMPTY:
         board[1][1] = AI
         return
-    
-    corners = [[0,0], [0,2], [2,0], [2,2]]
-    for cell in corners:
+
+    sides = [[0,1], [1,0], [1,2], [2,1]]
+    for cell in sides:
         if board[cell[0]][cell[1]] == EMPTY:
             board[cell[0]][cell[1]] = AI
             return
-    
-    sides = [[0,1], [1,0], [1,2], [2,1]]
-    for cell in sides:
+            
+    corners = [[0,0], [0,2], [2,0], [2,2]]
+    for cell in corners:
         if board[cell[0]][cell[1]] == EMPTY:
             board[cell[0]][cell[1]] = AI
             return
